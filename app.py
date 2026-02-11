@@ -8,7 +8,6 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 st.title("Titanic Survival Prediction")
-
 file = st.file_uploader("Upload Titanic CSV", type="csv")
 
 if file:
@@ -27,7 +26,6 @@ if file:
 
     X_train, X_test, y_train, y_test = train_test_split(
         X, y, test_size=0.2, random_state=42)
-
     scaler = StandardScaler()
     X_train = scaler.fit_transform(X_train)
     X_test = scaler.transform(X_test)
@@ -43,5 +41,5 @@ if file:
     ax.set_title("Confusion Matrix")
     ax.set_xlabel("Predicted")
     ax.set_ylabel("Actual")
-
     st.pyplot(fig)
+    #Vineet
